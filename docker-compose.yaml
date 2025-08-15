@@ -2,14 +2,14 @@ services:
   ui:
     build: ./mern/frontend
     ports:
-      -"5173:5173"
+      - "5173:5173"
     networks:
       - mern
   
   backend:
     build: ./mern/backend
     ports:
-      -"5050:5050"
+      - "5050:5050"
     networks:
       - mern
     depends_on:
@@ -20,15 +20,16 @@ services:
     networks:
       - mern
     ports:
-      -"27017:27017"
+      - "27017:27017"
     volumes:
-      -mongodata:/data/db
+      - mongodata: /data/db
 
     
 networks:
   mern:
-    driver:bridge
+    driver: bridge
 
 volumes:
   mongodata:
-    driver:local
+    driver: local
+
