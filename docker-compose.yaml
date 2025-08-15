@@ -22,7 +22,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongodata: /data/db
+      - mongodata:/data/db
 
     
 networks:
@@ -32,4 +32,5 @@ networks:
 volumes:
   mongodata:
     driver: local
+
 
