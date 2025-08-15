@@ -13,9 +13,9 @@ services:
     networks:
       - mern
     depends_on:
-      - mongodb
+      - db
 
-  mongodb:
+  db:
     image: mongo:latest
     networks:
       - mern
@@ -32,6 +32,7 @@ networks:
 volumes:
   mongodata:
     driver: local
+
 
 
 
